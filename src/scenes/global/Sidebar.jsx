@@ -86,7 +86,7 @@ const Sidebar = () => {
                 <Typography variant="h3" color={colors.grey[100]} fontWeight="bold" sx={{m: "10px 0 0 0"}}>Michail Reserford</Typography>
                 <Typography variant="h5" color={colors.greenAccent[500]} fontWeight="bold" sx={{m: "10px 0 0 0"}}>Just an Admin</Typography>
               </Box>
-            </Box>
+            </Box>  
           )}
         </Menu>
       </ProSidebar>
