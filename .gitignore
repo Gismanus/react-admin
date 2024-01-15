@@ -21,3 +21,8 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# auxiliary files
+.link-to-sidebar-pro
+index.html
+
