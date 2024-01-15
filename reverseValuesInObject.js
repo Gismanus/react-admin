@@ -67,10 +67,12 @@ function reverseObjectValues(obj) {
 
     let i = 0;
     for (let value in key) {
-      key[value] = values[i];
+      obj[key[value]] = values[i];
+      console.log(obj[key[value]]);
       i++;
     }
     console.log(obj[key], ',');
   }
 }
 
+reverseObjectValues(object)
