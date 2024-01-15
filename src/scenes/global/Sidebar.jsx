@@ -47,14 +47,14 @@ const Sidebar = () => {
         <Menu iconShape="square">
           {/* LOGO AND MENU ICON */}
           <MenuItem
-            onclick={() => setIsCollapsed(!isCollapsed)}
+            onClick={() => setIsCollapsed(!isCollapsed)}
             icon={isCollapsed ? <MenuOutlinedIcon /> : undefined}
             style={{
               margin: "10px 0 20px 0",
               color: colors.grey[100],
             }}
           >
-            {isCollapsed && (
+            {!isCollapsed && (
               <Box
                 display="flex"
                 justifyContent="space-between"
@@ -64,7 +64,7 @@ const Sidebar = () => {
                 <Typography varian="h3" color={colors.grey[500]}>
                   ADMINIS
                 </Typography>
-                <IconButton onclick={() => setIsCollapsed(!isCollapsed)}>
+                <IconButton onClick={() => {setIsCollapsed(!isCollapsed); console.log(isCollapsed)}}>
                   <MenuOutlinedIcon />
                 </IconButton>
               </Box>
@@ -79,14 +79,28 @@ const Sidebar = () => {
                   width="100px"
                   height="100px"
                   src={`../assets/myPhoto.png`}
-                  style={{ cursor: "pointer", borderRadius: "50%"}}
+                  style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>
               <Box textAlign="center">
-                <Typography variant="h3" color={colors.grey[100]} fontWeight="bold" sx={{m: "10px 0 0 0"}}>Michail Reserford</Typography>
-                <Typography variant="h5" color={colors.greenAccent[500]} fontWeight="bold" sx={{m: "10px 0 0 0"}}>Just an Admin</Typography>
+                <Typography
+                  variant="h3"
+                  color={colors.grey[100]}
+                  fontWeight="bold"
+                  sx={{ m: "10px 0 0 0" }}
+                >
+                  Michail Reserford
+                </Typography>
+                <Typography
+                  variant="h5"
+                  color={colors.greenAccent[500]}
+                  fontWeight="bold"
+                  sx={{ m: "10px 0 0 0" }}
+                >
+                  Just an Admin
+                </Typography>
               </Box>
-            </Box>  
+            </Box>
           )}
         </Menu>
       </ProSidebar>
