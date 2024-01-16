@@ -28,7 +28,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
       icon={icon}
     >
       <Typography>{title}</Typography>
-      <Link to={to}/>
+      <Link to={to} />
     </MenuItem>
   );
 };
@@ -60,7 +60,7 @@ const Sidebar = () => {
       }}
     >
       <ProSidebar collapsed={isCollapsed}>
-        <Menu iconShape="square">
+        <Menu iconShape="circle">
           {/* LOGO AND MENU ICON */}
           <MenuItem
             onClick={() => setIsCollapsed(!isCollapsed)}
@@ -77,7 +77,7 @@ const Sidebar = () => {
                 alignItems="center"
                 ml="15px"
               >
-                <Typography varian="h3" color={colors.grey[500]}>
+                <Typography varian="h3" color={colors.grey[100]}>
                   ADMINIS
                 </Typography>
                 <IconButton
@@ -126,77 +126,98 @@ const Sidebar = () => {
 
           {/* MENU ITEMS */}
           <Box paddingLeft={isCollapsed ? undefined : "10%"}>
-            <Item 
+            <Item
               title="Dashboard"
               to="/"
               icon={<HomeOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
-             <Item 
+            <Typography
+              variant="h6"
+              color={colors.grey[300]}
+              sx={{ m: "15px 0 5px 20px" }}
+            >
+              Data
+            </Typography>
+            <Item
               title="ManageTeam"
               to="/team"
               icon={<PeopleOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
-             <Item 
+            <Item
               title="Contacts Information"
               to="/contacts"
               icon={<ContactsOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
-              <Item 
+            <Item
               title="Invoices Balances"
               to="/invoices"
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-              />
-             <Item 
+            />
+            <Typography
+              variant="h6"
+              color={colors.grey[300]}
+              sx={{ m: "15px 0 5px 20px" }}
+            >
+              Pages
+            </Typography>
+            <Item
               title="Profile Form"
               to="/form"
               icon={<PersonOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
-             <Item 
+            <Item
               title="Calendar"
               to="/calendar"
               icon={<CalendarTodayOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
-             <Item 
+            <Item
               title="FAQ Page"
               to="/faq"
               icon={<HelpOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
-             <Item 
+            <Typography
+              variant="h6"
+              color={colors.grey[300]}
+              sx={{ m: "15px 0 5px 20px" }}
+            >
+              Charts
+            </Typography>
+            <Item
               title="Bar Chart"
               to="/bar"
               icon={<BarChartOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
-            <Item 
+            <Item
               title="Pie Chart"
               to="/pie"
               icon={<PieChartOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
-            <Item 
+            <Item
               title="Line Chart"
               to="/line"
               icon={<TimelineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
-            <Item 
+            <Item
               title="Geography Chart"
               to="/geoghaphy"
               icon={<MapOutlinedIcon />}
