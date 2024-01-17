@@ -4,7 +4,6 @@ import { tokens } from "../theme";
 const Header = ({ title, subtitle }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  sideBarState = title[0]+title.slice(1).toLowerCase();
   return (
     <Box mb="30px">
       <Typography
