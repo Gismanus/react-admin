@@ -59,7 +59,7 @@ let object = {
 function reverseObjectValues(obj) {
   for (let key in obj) {
     let values = [];
-    console.log(key + ':');
+    console.log(key + ":");
     for (let value in key) {
       values.push(key[value]);
     }
@@ -71,8 +71,16 @@ function reverseObjectValues(obj) {
       console.log(obj[key[value]]);
       i++;
     }
-    console.log(obj[key], ',');
+    console.log(obj[key], ",");
   }
 }
 
-reverseObjectValues(object)
+/* reverseObjectValues(object) */
+const myPromise = () => Promise.resolve().then(()=>
+console.log('1'));
+
+const firstFunction = () => {
+  setTimeOut(()=> console.log('2'), 0);
+  myPromise();
+
+}

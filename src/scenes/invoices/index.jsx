@@ -17,38 +17,35 @@ const Invoices = () => {
       cellClasssName: "name-column--cell",
     },
     {
-        field: "email",
-        headerName: "Email",
-        flex: 1.5,
-      },
-      {
-        field: "cost",
-        headerName: "Cost",
-        flex: 1,
-        renderCell: (params) => (
-            <Typography color={colors.greenAccent[500]}>
-                ${params.row.cost}
-            </Typography>
-        )
-      },
+      field: "email",
+      headerName: "Email",
+      flex: 1.5,
+    },
+    {
+      field: "cost",
+      headerName: "Cost",
+      flex: 1,
+      renderCell: (params) => (
+        <Typography color={colors.greenAccent[500]}>
+          ${params.row.cost}
+        </Typography>
+      ),
+    },
     {
       field: "phone",
       headerName: "Phone Number",
       flex: 1,
     },
     {
-        field: "date",
-        headerName: "Date",
-        flex: 1,
-      },
+      field: "date",
+      headerName: "Date",
+      flex: 1,
+    },
   ];
 
   return (
     <Box m={2}>
-      <Header
-        title="INVOICES"
-        subtitle="List of Invoice Balances"
-      ></Header>
+      <Header title="INVOICES" subtitle="List of Invoice Balances"></Header>
       <Box
         m="40px 0 0 0"
         height="70vh"
@@ -78,11 +75,7 @@ const Invoices = () => {
           },
         }}
       >
-        <DataGrid
-        checkboxSelection
-          rows={mockDataInvoices}
-          columns={columns}
-        />
+        <DataGrid checkboxSelection rows={mockDataInvoices} columns={columns} />
       </Box>
     </Box>
   );
