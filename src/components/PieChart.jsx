@@ -44,7 +44,7 @@ const PieChart = () => {
         tooltip: {
           color: colors.greenAccent[300],
           container: {
-            background: colors.grey[600],
+            background: colors.primary[600],
           },
         },
       }}

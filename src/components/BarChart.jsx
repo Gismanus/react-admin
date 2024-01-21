@@ -4,7 +4,7 @@ import { ResponsiveBar } from "@nivo/bar";
 import { tokens } from "../theme";
 import {  mockBarData as Data } from "../data/mockData";
 
-const BarChart = ({ data /* see data tab */ }, {isDashboard = false}) => {
+const BarChart = ({isDashboard = false}) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -40,9 +40,9 @@ const BarChart = ({ data /* see data tab */ }, {isDashboard = false}) => {
         },
         tooltip: {
           color: colors.greenAccent[300],
-          container: {
-            background: colors.grey[600],
-          }
+            container: {
+              background: colors.primary[600],
+            },
         },
       }}
       keys={["hot dog", "burger", "sandwich", "kebab", "fries", "donut"]}
