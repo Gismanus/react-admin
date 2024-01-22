@@ -34,7 +34,7 @@ const LineChart = (isDashboard = false) => {
             },            
         },
         legends: {
-            tex: {
+            text: {
                 fill: colors.grey[100]
             },
         
