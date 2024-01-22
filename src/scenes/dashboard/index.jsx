@@ -15,6 +15,7 @@ import LineChart from "../../components/LineChart";
 import BarChart from "../../components/BarChart";
 import GeographyChart from "../../components/GeographyChart";
 import PieChart from "../../components/PieChart";
+import ProgressCircle from "../../components/ProgressCircle";
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -207,22 +208,85 @@ const Dashboard = () => {
                 >
                   {transaction.txId}
                 </Typography>
-                <Typography
-                  
-                  
-                  color={colors.grey[100]}
-                >
+                <Typography color={colors.grey[100]}>
                   {transaction.user}
                 </Typography>
               </Box>
-              <Box color={colors.grey[100]}>
-                {transaction.date}
-              </Box>
-              <Box backgroundColor={colors.greenAccent[500]} p="5px 10px" borderRadius="4px">
+              <Box color={colors.grey[100]}>{transaction.date}</Box>
+              <Box
+                backgroundColor={colors.greenAccent[500]}
+                p="5px 10px"
+                borderRadius="4px"
+              >
                 ${transaction.cost}
               </Box>
             </Box>
           ))}
+        </Box>
+
+        {/* ROW 3 */}
+        <Box
+          gridColumn="span 4"
+          gridRow="span 2"
+          backgroundColor={colors.primary[400]}
+          p="30px"
+        >
+          <Typography variant="h5" fontWeight="600" color={colors.grey[100]}>
+            Campaign
+          </Typography>
+          <Box
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            justifyContent="space-between"
+            mt="25px"
+          >
+            <ProgressCircle size="125" />
+            <Typography
+              variant="h5"
+              color={colors.greenAccent[500]}
+              sx={{ mt: "15px", mb: "5px" }}
+            >
+              #48,352 revenue generated
+            </Typography>
+            <Typography>Includes extra misx expenditures and costs</Typography>
+          </Box>
+        </Box>
+        <Box
+          gridColumn="span 4"
+          gridRow="span 2"
+          backgroundColor={colors.primary[400]}
+        >
+          <Typography
+            variant="h5"
+            fontWeight="600"
+            color={colors.grey[100]}
+            pt="30px"
+            pl="30px"
+          >
+            Sales Quantity
+          </Typography>
+          <BarChart isDashboard={true} />
+        </Box>
+        <Box
+          gridColumn="span 4"
+          gridRow="span 2"
+          backgroundColor={colors.primary[400]}
+          p="30px"
+        >
+          <Typography variant="h5" fontWeight="600" color={colors.grey[100]}>
+            Geography Based Trafic
+          </Typography>
+          <Box
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            justifyContent="space-between"
+            mt="10px"
+            height="90%"
+          >
+            <GeographyChart isDashboard={true} />
+          </Box>
         </Box>
       </Box>
     </Box>
