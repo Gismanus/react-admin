@@ -8,6 +8,8 @@ In the project directory, you can run:
 
 ### `npm start`
 
+<!-- There are problems with starting. Start start and Open the package.json and type ctrl + s and it disappears. -->
+
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
